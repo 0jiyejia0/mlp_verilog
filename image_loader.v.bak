@@ -1,0 +1,10 @@
+module image_loader(
+    output reg [0:783] input_data  // 每个像素用1位表示
+);
+
+// 使用 $readmemh 读取图像数据
+initial begin
+    $readmemh("image_0.txt", input_data);
+end
+
+endmodule

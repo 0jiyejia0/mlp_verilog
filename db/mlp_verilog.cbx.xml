@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mlp_verilog">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult784" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult788" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult793" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult785" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult787" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult789" CBX_FILE_NAME="mult_93t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult790" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult792" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult786" CBX_FILE_NAME="mult_73t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mlp_verilog|forward_pass:inst|lpm_mult:Mult791" CBX_FILE_NAME="mult_73t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
