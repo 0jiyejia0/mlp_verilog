@@ -53,7 +53,7 @@ always @(posedge clk or posedge rst) begin
                 // 定点乘法： (W1*X)>>8 假设Q8.8 * Q8.8 = Q16.16，再适当右移
                 // 简化：acc += (W1[j][i]*input_data[j]) >> 8;
                 // 实际中需流水化，这里简化为组合逻辑描述（仿真用）
-                acc = acc + (W1[j][i]*input_data[j]);
+                acc = acc + (W1[j][i]*input_data[j])>> 8;
             end
             // 加上偏置 b1[i]
             acc = acc + b1[i];
@@ -83,7 +83,7 @@ always @(posedge clk or posedge rst) begin
             // 对第i个输出单元计算：z2[i] = sum over m of W2[m][i]*hidden[m] + b2[i]
             acc = 0;
             for (j = 0; j < 10; j = j+1) begin
-                acc = acc + (W2[j][i]*hidden[j]);
+                acc = acc + (W2[j][i]*hidden[j])>> 8;
             end
             acc = acc + b2[i];
             output_data[i] <= acc[15:0]; // 输出的Q8.8格式值
@@ -96,8 +96,11 @@ always @(posedge clk or posedge rst) begin
         end
 
         LAYER2_FINISH: begin
-            // 如果要softmax，这里需要额外模块进行指数和归一化
-            // 否则直接done
+            for(j=0;j<10;j=j+1)begin
+					if(output_data[i]<0)begin
+						output_data[i]=0-output_data[i];
+					end
+				end	
             done <= 1;
             state <= DONE;
         end
